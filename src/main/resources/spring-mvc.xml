@@ -22,8 +22,20 @@
 		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.3.xsd">
 
 	<context:annotation-config></context:annotation-config>
-	<context:component-scan base-package="com.hqlip.modules"></context:component-scan>
+	
+	<context:component-scan base-package="com.hqlip">
+		<context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+	</context:component-scan>
+	
+	<!-- HandlerMapping，无需配置，Spring MVC可以默认启动。
+	DefaultAnnotationHandlerMapping annotation-driven HandlerMapping -->
+	
+	<!-- 扩充了注解驱动，可以将请求参数绑定到控制器参数 -->
 	<mvc:annotation-driven></mvc:annotation-driven>
+	
+	<!-- 静态资源处理, css js img -->
+	<mvc:resources location="/resources/**" mapping="/resources/"></mvc:resources>
+	
 	<bean id="viewResolvr" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<!-- <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"></property>
 		<property name="prefix" value="WEB-INF/jsp/" />
