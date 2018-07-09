@@ -7,6 +7,13 @@
   <version>1.0-SNAPSHOT</version>
   <name>springMVCTest Maven Webapp</name>
   <!-- <url>http://maven.apache.org</url> -->
+  <repositories>
+  	<repository>
+  		<id>alimaven</id>
+  		<name>aliyun maven</name>
+  		<url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+  	</repository>
+  </repositories>
   <dependencyManagement>
   	<dependencies>
   		<dependency>
@@ -33,6 +40,11 @@
     <dependency>
     	<groupId>org.springframework</groupId>
     	<artifactId>spring-webmvc</artifactId>
+    </dependency>
+    <dependency>
+    	<groupId>org.slf4j</groupId>
+    	<artifactId>slf4j-api</artifactId>
+    	<version>1.7.25</version>
     </dependency>
   </dependencies>
   <build>
