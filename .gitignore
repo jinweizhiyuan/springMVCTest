@@ -1,6 +1,7 @@
-.settings
+.idea/
+.settings/
+target/
 .classpath
 .project
-.idea
 .springBeans
-.springMVCTest.iml
+springMVCTest.iml

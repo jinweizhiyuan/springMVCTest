@@ -47,4 +47,10 @@
   		<param-value>utf-8</param-value>
   	</init-param>
   </filter>
+
+    <!--jetty idea热更新静态资源,报无法操作缓存区内的文件，无法使用-->
+    <!--<servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>*.html</url-pattern>
+    </servlet-mapping>-->
 </web-app>
