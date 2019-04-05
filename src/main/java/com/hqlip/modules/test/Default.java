@@ -1,4 +1,4 @@
-package com.hqlip.modules;
+package com.hqlip.modules.test;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -29,11 +29,10 @@ public class Default {
 			Map o = new HashMap();
 			o.put("qq", "qq:" + i);
 			li.add(o);
-			log.warn(i + "");
 		}
 		
 		ModelAndView mav = new ModelAndView();
-		mav.setViewName("/ModelAndView.jsp");
+		mav.setViewName("/test/ModelAndView");
 //		mav.addObject("name", "hqlip");
 		mav.addObject("qqs", li);
 		
